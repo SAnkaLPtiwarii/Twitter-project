@@ -1,0 +1,430 @@
+/* App.css */
+/* App.css */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.app-container {
+  max-height: 100vh;
+  /* 100% of the viewport height */
+  overflow: hidden;
+  /* Prevent scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+.job-header,
+.navbar {
+  flex-shrink: 0;
+  /* Prevent these elements from shrinking */
+}
+
+.main-content {
+  overflow: auto
+    /* Adjust as needed, can be auto if internal scrolling is desired */
+}
+
+
+
+.app-container {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  .notification-bell {
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.left-column {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+  }
+}
+
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar li {
+  cursor: pointer;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar i {
+  font-size: 1.2em;
+}
+
+/* .notification-bell {
+  font-size: 1.5em;
+  cursor: pointer;
+} */
+
+.navbar li:hover {
+  background-color: #e9ecef;
+}
+
+/* JobHeader.css */
+
+/* App.css */
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+}
+
+.top-header h2,
+.job-title h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  /* Ensure consistent font size */
+  color: #333;
+  /* Consistent color */
+}
+
+.notification-bell i {
+  font-size: 1.5em;
+}
+
+.job-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.job-title {
+  text-align: center;
+}
+
+.posted-info .status-open {
+  color: green;
+}
+
+.location-salary {
+  font-size: 1.1em;
+  color: #343a40;
+}
+
+.title-and-bell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bell-icon {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #666;
+}
+
+.status-open {
+  color: green;
+}
+
+.job-title h1 {
+  color: #007bff;
+  /* Blue color for the job title */
+}
+
+.posted-info .status-open {
+  color: green;
+  /* Green color for "Open" status */
+}
+
+.job-numbers span {
+  color: #555;
+  /* Dark grey for job numbers */
+}
+
+.company-info h3 {
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.company-info {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.company-left,
+.company-right {
+  flex: 1;
+}
+
+
+.job-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.posted-info {
+  color: #6c757d;
+  font-size: 0.9em;
+}
+
+.location-salary {
+  font-size: 1.1em;
+  color: #343a40;
+}
+
+/* JobDetails.css */
+.job-header .job-numbers {
+  display: flex;
+  gap: 20px;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.job-header .job-numbers span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.job-details {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.job-details h3 {
+  margin-top: 0;
+}
+
+.job-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.job-details li {
+  margin-bottom: 10px;
+}
+
+/* CompanyInfo.css */
+
+
+
+.company-info h3 {
+  margin-top: 0;
+}
+
+/* Sidebar.css */
+
+.sidebar {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.delete-job,
+.edit-job {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.edit-job {
+  background-color: #007bff;
+}
+
+.delete-job:hover {
+  background-color: #c82333;
+}
+
+.edit-job:hover {
+  background-color: #0056b3;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.skills-icons img {
+  margin-right: 10px;
+  /* Space between icons */
+  vertical-align: middle;
+  /* Align icons with text vertically */
+}
+
+.company-info {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.company-info h3 {
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.company-details {
+  display: flex;
+  justify-content: space-between;
+  /* Adjust spacing between the two columns */
+}
+
+.company-left,
+.company-right {
+  width: 50%;
+  /* Divide the space evenly between the two columns */
+  padding: 10px;
+  /* Add some padding for spacing inside columns */
+}
+
+.company-left p,
+.company-right p {
+  margin: 5px 0;
+  /* Spacing between paragraphs */
+  font-size: 1em;
+  line-height: 1.5;
+  /* Improve readability */
+}
+
+
+.job-details {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* App.css */
+
+.app-container {
+  max-height: 100vh;
+  /* Prevents the entire app from overflowing vertically */
+  overflow: hidden;
+}
+
+.job-details {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.skills-icons img {
+  margin-right: 10px;
+  /* Space between icons */
+  vertical-align: middle;
+  /* Align icons with text vertically */
+}
+
+.job-details {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* App.css */
+
+.skills-icons {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 30px;
+
+}
+
+.icon-with-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.icon-with-text img {
+  width: 30px;
+
+  height: auto;
+}
+
+.icon-with-text span {
+  font-size: 0.9em;
+  color: #333;
+
+}
+
+.skills {
+  display: flex;
+  align-items: flex-start;
+  /* Updated for better support */
+  justify-content: flex-start;
+  /* Updated if using 'start' */
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  /* No change needed here */
+  justify-content: flex-start;
+  /* Updated if using 'start' */
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+
+}
